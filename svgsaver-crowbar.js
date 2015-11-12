@@ -33,7 +33,6 @@ function createPopover (source) {
 // from https://github.com/NYTimes/svg-crowbar/blob/gh-pages/svg-crowbar.js
 function initialize () {
   var documents = [window.document];
-  var SVGSources = [];
   var iframes = document.querySelectorAll('iframe');
   var objects = document.querySelectorAll('object');
 
@@ -60,10 +59,7 @@ function initialize () {
   documents.forEach(function (doc) {
     var newSources = doc.querySelectorAll('svg');
     for (var i = 0; i < newSources.length; i++) {
-      SVGSources.push(newSources[i]);
+      createPopover(newSources[i]);
     }
   });
-  if (SVGSources.length > 0) {
-    SVGSources.forEach(createPopover);
-  }
 }

@@ -5,7 +5,7 @@
   "main": "svgsaver-crowbar.js",
   "scripts": {
     "browserify": "browserify svgsaver-crowbar.js > browser.js",
-    "uglifyjs": "uglifyjs browser.js > browser.min.js",
+    "uglifyjs": "uglifyjs browser.js --mangle --screw-ie8 > browser.min.js",
     "build": "npm run browserify && npm run uglifyjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
