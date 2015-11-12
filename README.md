@@ -7,6 +7,16 @@ A bookmarklet that extracts SVG images and accompanying styles from an HTML docu
   
 ### Try Here:
 
+<style>
+#puddle { fill: #9CDAF1; }
+#shadow-legs { fill: #7DBBE6; }
+#face { fill: #F4CBB2; }
+#eyes { fill: #FFF; }
+#face-features { fill: #AD5C51; }
+#octo { fill: #C3E4D8; }
+#drop { fill: #9CDAF1; }}
+</style>
+	
 <svg id="octocat" title="octocat" xmlns="http://www.w3.org/2000/svg" viewBox="-0.2 -1 379 334">
 <path id="puddle" d="m296.94 295.43c0 20.533-47.56 37.176-106.22 37.176-58.67 0-106.23-16.643-106.23-37.176s47.558-37.18 106.23-37.18c58.66 0 106.22 16.65 106.22 37.18z"/>
 <g id="shadow-legs">
