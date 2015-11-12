@@ -4,9 +4,10 @@
   "description": "",
   "main": "svgsaver-crowbar.js",
   "scripts": {
-    "browserify": "browserify svgsaver-crowbar.js > browser.js",
-    "uglifyjs": "uglifyjs browser.js > browser.min.js",
-    "build": "npm run browserify && npm run uglifyjs",
+    "rollup": "rollup ./src/svgsaver-crowbar.js | babel -o ./lib/svgsaver-crowbar.js",
+    "browserify": "browserify ./lib/svgsaver-crowbar.js > browser.js",
+    "uglifyjs": "uglifyjs --mangle --screw-ie8 browser.js > browser.min.js",
+    "build": "npm run rollup && npm run browserify && npm run uglifyjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jayson Harshbarger",
@@ -15,7 +16,9 @@
     "svgsaver": "^0.4.0"
   },
   "devDependencies": {
+    "babel": "^5.8.23",
     "browserify": "^12.0.1",
+    "rollup": "^0.16.1",
     "uglifyjs": "^2.4.10"
   }
 }

@@ -1,4 +1,4 @@
-var SvgSaver = require('svgsaver');
+import SvgSaver from 'svgsaver';
 
 var body = document.body;
 var svgsaver = new SvgSaver();
