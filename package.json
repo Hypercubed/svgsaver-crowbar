@@ -1,0 +1,21 @@
+{
+  "name": "svgsaver-crowbar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "svgsaver-crowbar.js",
+  "scripts": {
+    "browserify": "browserify svgsaver-crowbar.js > browser.js",
+    "uglifyjs": "uglifyjs browser.js > browser.min.js",
+    "build": "npm run browserify && npm run uglifyjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jayson Harshbarger",
+  "license": "MIT",
+  "dependencies": {
+    "svgsaver": "^0.4.0"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "uglifyjs": "^2.4.10"
+  }
+}
