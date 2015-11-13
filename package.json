@@ -6,7 +6,8 @@
   "scripts": {
     "browserify": "browserify svgsaver-crowbar.js > browser.js",
     "uglifyjs": "uglifyjs browser.js --mangle --screw-ie8 > browser.min.js",
-    "build": "npm run browserify && npm run uglifyjs",
+    "uglifyjs:bookmarklet": "uglifyjs bookmarklet.js --mangle --screw-ie8 --quotes=1 > bookmarklet.min.js",
+    "build": "npm run browserify && npm run uglifyjs && npm run uglifyjs:bookmarklet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jayson Harshbarger",
