@@ -347,11 +347,11 @@ var SvgSaver = (function () {
   }, {
     key: 'getUri',
     value: function getUri(el) {
-      var html = this.getHTML(el);
+      var html = encodeURIComponent(this.getHTML(el));
       if (isDefined(window.btoa)) {
-        return 'data:image/svg+xml;base64,' + window.btoa(html);
+        return 'data:image/svg+xml;base64,' + window.btoa(unescape(html));
       }
-      return 'data:image/svg+xml,' + encodeURIComponent(html);
+      return 'data:image/svg+xml,' + html;
     }
 
     /**
