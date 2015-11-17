@@ -13,7 +13,7 @@
   "author": "Jayson Harshbarger",
   "license": "MIT",
   "dependencies": {
-    "svgsaver": "^0.4.0"
+    "svgsaver": "^0.6.1"
   },
   "devDependencies": {
     "browserify": "^12.0.1",
